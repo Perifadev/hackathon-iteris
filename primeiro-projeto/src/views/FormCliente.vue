@@ -1,44 +1,43 @@
 <template>
-  <validation-observer ref="observer">
-    <div class="container">
-      <h1>Diga-me o que você</h1>
-      <form @submit.prevent="submit">
-        <validation-provider name="Name" rules="required|max:30">
-          <v-text-field
-            v-model="name"
-            :counter="30"
-            label="Name"
-            required
-          ></v-text-field>
-        </validation-provider>
-
-        <validation-provider name="telefone" rules="telefone">
-          <v-text-field
-            v-model="telefone"
-            label="telefone"
-            requiredname="telefone"
-            required
-          ></v-text-field>
-        </validation-provider>
-
-        <validation-provider name="email" rules="required|email">
-          <v-text-field
-            v-model="email"
-            label="E-mail"
-            requiredname="email"
-            autocomplete="off"
-            required
-          ></v-text-field>
-        </validation-provider>
-
-        <v-btn class="mr-4" type="submit"> Enviar </v-btn>
-      </form>
-    </div>
-  </validation-observer>
+  <v-container fluid>
+    <v-checkbox
+      v-model="checkbox1"
+      :label="`Checkbox 1: ${checkbox1.toString()}`"
+    ></v-checkbox>
+    <v-checkbox
+      v-model="checkbox2"
+      :label="`Checkbox 2: ${checkbox2.toString()}`"
+    ></v-checkbox>
+    <v-checkbox
+      v-model="checkbox1"
+      :label="`Checkbox 1: ${checkbox1.toString()}`"
+    ></v-checkbox>
+    <v-checkbox
+      v-model="checkbox2"
+      :label="`Checkbox 2: ${checkbox2.toString()}`"
+    ></v-checkbox>
+    <v-checkbox
+      v-model="checkbox1"
+      :label="`Checkbox 1: ${checkbox1.toString()}`"
+    ></v-checkbox>
+    <v-checkbox
+      v-model="checkbox2"
+      :label="`Checkbox 2: ${checkbox2.toString()}`"
+    ></v-checkbox>
+    <v-checkbox
+      v-model="checkbox1"
+      :label="`Checkbox 1: ${checkbox1.toString()}`"
+    ></v-checkbox>
+    <v-checkbox
+      v-model="checkbox2"
+      :label="`Checkbox 2: ${checkbox2.toString()}`"
+    ></v-checkbox>
+  </v-container>
 </template>
 
 <script>
 export default {
+  name: "FormCliente",
   data: () => ({
     name: "",
     telefone: "",
