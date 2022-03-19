@@ -1,16 +1,24 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import HomeIs from "../views/HomeIs.vue"
+import CadastroEmpresa from "../views/CadastroEmpresa.vue";
+import FormCliente from "../views/FormCliente.vue";
 
+const routes = [ {
+  path: "/cadastroempresa",
+  name: "Cadastro de Empresa",
+  component: CadastroEmpresa,
+},
 
-const routes = [
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-  
+{
+  path: "/formcliente",
+  name: "Formulário Cliente",
+  component: FormCliente,
+},
+{
+  path: "/home",
+  name: "Home",
+  component: HomeIs,
+
+},
 ]
-
-const router = createRouter({
-  history: createWebHashHistory(),
-  routes
-})
 
 export default router
