@@ -1,10 +1,25 @@
 <template>
-  <nav>
-    <p></p>
-  </nav>
 
+  <v-app>
+    <AppTopBar/>
+    <v-main>
+      <router-view />
+    </v-main>
+  </v-app>
 </template>
 
-<style>
+<script>
+import AppTopBar from "../src/components/AppTopBar.vue"
+export default {
+  name:"App",
+  components:{
+    AppTopBar
+  }
+};
+
+
+</script>
+
+<style lang="scss">
 
 </style>
