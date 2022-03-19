@@ -1,5 +1,5 @@
 <template>
-  <div>a</div>
+  <div>oi</div>
 </template>
 <script>
 export default {
